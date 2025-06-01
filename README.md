@@ -30,8 +30,10 @@ An advanced command-line multicast network testing utility with enhanced feature
 
 Pre-compiled binaries are available in the `Bin/` folder:
 
-- **Windows**: `Multicast Testing Tool - ICTFella.com V3.exe`
-- **Linux**: `multicast-testing-tool-ictfella-v3-linux`
+- **Windows**: `Multicast Testing Tool - ICTFella.com V3.exe` (64MB - fully self-contained)
+- **Linux**: `multicast-testing-tool-ictfella-v3-linux` (64MB - fully self-contained)
+
+> **Note**: The executables are ~64MB because they include the entire .NET runtime and all dependencies, making them truly portable with no external requirements.
 
 ## 🛠️ Building from Source
 
@@ -43,12 +45,12 @@ Pre-compiled binaries are available in the `Bin/` folder:
 
 #### Windows Build
 ```bash
-dotnet publish -c Release -r win-x64 --self-contained true -p:PublishSingleFile=true
+dotnet publish -c Release -r win-x64 -p:PublishSingleFile=true -p:SelfContained=true -p:PublishReadyToRun=false -p:PublishTrimmed=false
 ```
 
 #### Linux Build
 ```bash
-dotnet publish MulticastTest-Linux.csproj -c Release -r linux-x64 --self-contained true -p:PublishSingleFile=true
+dotnet publish -c Release -r linux-x64 -p:PublishSingleFile=true -p:SelfContained=true -p:PublishReadyToRun=false -p:PublishTrimmed=false
 ```
 
 ## 📋 Usage
@@ -124,7 +126,7 @@ Logs are automatically created in the `logs/` directory:
 
 - **Framework**: .NET 8.0
 - **Language**: C#
-- **Deployment**: Self-contained single-file executables
+- **Deployment**: Self-contained single-file executables (~64MB each)
 - **Logging**: Thread-safe file-based logging with millisecond precision
 - **Network**: UDP-based multicast using System.Net.Sockets
 
@@ -145,7 +147,12 @@ Contributions are welcome! Please feel free to submit issues and pull requests.
 
 ## 📊 Version History
 
-### V3.0.0 (Current)
+### V3.0.1 (Current)
+- **🔧 Fixed**: Self-contained executable deployment - no more DLL dependency errors
+- **🔧 Improved**: Executables now truly self-contained (~64MB each)
+- **🔧 Enhanced**: Build process optimized for single-file deployment
+
+### V3.0.0 
 - Added colorized console output
 - Configurable TTL settings
 - Comprehensive logging system

@@ -12,11 +12,6 @@
     <AssemblyVersion>3.0.0.0</AssemblyVersion>
     <AssemblyFileVersion>3.0.0.0</AssemblyFileVersion>
     <Copyright>Copyright © ICTFella.com 2024</Copyright>
-    <PublishSingleFile>true</PublishSingleFile>
-    <SelfContained>true</SelfContained>
-    <RuntimeIdentifier>win-x64</RuntimeIdentifier>
-    <PublishReadyToRun>true</PublishReadyToRun>
-    <PublishTrimmed>false</PublishTrimmed>
   </PropertyGroup>
 
 </Project>
