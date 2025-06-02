@@ -2,6 +2,16 @@
 
 An advanced command-line multicast network testing utility with enhanced features including colorized output, configurable TTL, comprehensive logging, and cross-platform support.
 
+## 📸 Screenshots
+
+### Windows Version
+![Windows Multicast Testing Tool](Windows.png)
+*ICTFella.com Multicast Testing Tool V3 running on Windows with colorized interface*
+
+### Linux Version  
+![Linux Multicast Testing Tool](Linux.png)
+*ICTFella.com Multicast Testing Tool V3 running on Linux with full functionality*
+
 ## 🚀 Features
 
 ### ✨ Enhanced User Experience
